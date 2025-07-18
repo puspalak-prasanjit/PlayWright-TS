@@ -18,7 +18,7 @@ export default defineConfig({
     // Optional: set timeouts for actions and navigation too
     actionTimeout: 10000,        // max time for actions like click(), fill(), etc.
     navigationTimeout: 30000,    // max time for page.goto()
-    headless = true
+    headless: true
   }, 
   testDir: './mytests',
   /* Run tests in files in parallel */
