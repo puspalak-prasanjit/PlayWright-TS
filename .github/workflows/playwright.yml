@@ -30,3 +30,10 @@ jobs:
       - name: Run Playwright tests
         run: npx playwright test
         working-directory: mytests
+
+      - name: Upload Playwright HTML Report
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: playwright-html-report
+          path: mytests/playwright-report/
