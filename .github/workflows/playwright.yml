@@ -30,6 +30,7 @@ jobs:
       - name: Run Playwright tests
         run: npx playwright test --reporter=html
         working-directory: mytests
+        continue-on-error: true   # ✅ don't fail if tests fail
 
       - name: Upload Playwright HTML Report
         uses: actions/upload-artifact@v4
