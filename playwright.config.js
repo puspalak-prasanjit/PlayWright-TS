@@ -1,5 +1,4 @@
 import { defineConfig, devices } from '@playwright/test';
-
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -12,8 +11,15 @@ import { defineConfig, devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  timeout: 300000, // 5 minutes
-  testDir: './tests',
+  
+  timeout: 60000, // 60 seconds for each test
+
+  use: {
+    // Optional: set timeouts for actions and navigation too
+    actionTimeout: 10000,        // max time for actions like click(), fill(), etc.
+    navigationTimeout: 30000,    // max time for page.goto()
+  }, 
+  testDir: './mytests',
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
