@@ -8,5 +8,7 @@ test('Check live scores',async()=>{
     const page:Page = await browser.newPage();
     
     await page.goto("https://cricbuzz.com");
+
+    console.log("checking CI report");
     
 });
