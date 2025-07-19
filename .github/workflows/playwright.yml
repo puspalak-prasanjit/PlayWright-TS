@@ -32,6 +32,9 @@ jobs:
         working-directory: mytests
         continue-on-error: true
 
+      - name: Debug folder contents
+        run: ls -R mytests  
+
       - name: Upload Playwright HTML Report
         if: always()
         uses: actions/upload-artifact@v4
