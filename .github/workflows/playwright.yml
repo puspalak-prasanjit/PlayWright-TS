@@ -28,7 +28,7 @@ jobs:
         working-directory: mytests
 
       - name: Run Playwright Tests
-        run: npx playwright test --reporter=html
+        run: npx playwright test --config=playwright.config.js --reporter=html
         working-directory: mytests
         continue-on-error: true
 
