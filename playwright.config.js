@@ -27,5 +27,19 @@ projects: [
       headless: true  // 🔥 Forces headless mode even with device preset
     },
   },
+  {
+    name: 'firefox',
+    use: {
+      ...devices['Desktop Firefox'],
+      headless: true,
+    },
+  },
+  {
+    name: 'webkit',
+    use: {
+      ...devices['Desktop Safari'],
+      headless: true,
+    },
+  },
 ],
 });
