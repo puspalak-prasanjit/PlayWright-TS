@@ -21,23 +21,28 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: mytests
 
       - name: Install Playwright Browsers
         run: npx playwright install
-        working-directory: mytests
 
       - name: Run Playwright Tests
-        run: npx playwright test --config=playwright.config.js --reporter=html
-        working-directory: mytests
+        run: npx playwright test --reporter=html
         continue-on-error: true
 
-      - name: Debug folder contents
-        run: ls -R mytests  
+      - name: Debug repo and mytests folder
+        run: |
+          echo "Root files:"
+          ls -la
+          echo "-------"
+          echo "mytests contents:"
+          ls -la mytests
+          echo "-------"
+          echo "Report folder:"
+          ls -la playwright-report || echo "playwright-report not found"
 
       - name: Upload Playwright HTML Report
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: playwright-html-report
-          path: mytests/playwright-report/
+          path: playwright-report/
