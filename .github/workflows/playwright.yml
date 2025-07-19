@@ -27,6 +27,7 @@ jobs:
 
       - name: Run Playwright Tests
         run: npx playwright test --reporter=html
+        working-directory: .
         continue-on-error: true
 
       - name: Debug repo and mytests folder
