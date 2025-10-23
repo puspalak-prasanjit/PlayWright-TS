@@ -17,10 +17,10 @@ export default defineConfig({
       name: 'chromium',
       use: { browserName: 'chromium', channel: 'chrome' },
     },
-    // {
-    //   name: 'firefox',
-    //   use: { browserName: 'firefox' },
-    // },
+    {
+      name: 'firefox',
+      use: { browserName: 'firefox' },
+    },
     // {
     //   name: 'webkit',
     //   use: { browserName: 'webkit' },

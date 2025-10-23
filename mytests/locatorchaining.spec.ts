@@ -23,7 +23,6 @@ test('Chaining of locators', async()=>{
     await page.locator('form#Form_getForm').locator('#Form_getForm_Name').fill('Prasanjit');
     await page.locator('form#Form_getForm').getByRole('button', {name: 'Get Your Free Trial'}).click();
 
-
     await page.waitForTimeout(10000);
-
+    
 })

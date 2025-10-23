@@ -13,7 +13,6 @@ test('Auto wait checks 1 ', async()=>{
     //default timeout in playwright is 30 seconds
 
     
-
     await page.goto("https://davidwalsh.name/demo/multiple-file-upload.php");
     await page.locator("input[name='agreeTerms1a2b']").check({timeout: 5000});
 

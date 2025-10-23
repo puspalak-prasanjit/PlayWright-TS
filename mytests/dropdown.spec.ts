@@ -28,12 +28,5 @@ test('dropdown test', async()=>{
         }
     }
 
-
-
-
-
-
-
-
     await page.waitForTimeout(15000);
 });
