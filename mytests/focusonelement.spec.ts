@@ -13,7 +13,7 @@ test('Focus on element', async()=>{
 
       const fullname = page.locator("#Form_getForm_Name");
       await fullname.focus();
-      await fullname.fill("automation testing");
+      await fullname.fill("API testing");
 
       await page.waitForTimeout(10000);     
     
